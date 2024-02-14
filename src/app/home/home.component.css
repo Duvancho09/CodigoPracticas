@@ -1,0 +1,75 @@
+.container{
+    text-align: center;
+    display: flex;
+    font-family: 'Exo 2', sans-serif;
+}
+.container h1{
+    color: black;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.container h1{
+    transition: transform 0.3s ease-in-out;
+}
+.container h1:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 10px rgb(126, 233, 105);
+}
+.imagenMov{
+    position: relative;
+}
+.cabeza, .cuerpo, .brazo, .pierna{
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    position: absolute;
+    border-radius: 50%;
+}
+.cuerpo{
+    top: 60px;
+}
+.brazo, .pierna{
+    width: 20px;
+    height: 80px;
+    background-color: #e74c3c;
+}
+.brazo {
+    top: 70px;
+}
+
+.brazo, .izquierdo {
+    left: -10px;
+}
+
+.brazo, .derecho {
+    right: -10px;
+}
+
+.pierna {
+    top: 130px;
+}
+
+.pierna, .izquierda {
+    left: 15px;
+}
+
+.pierna, .derecha {
+    right: 15px;
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.imagenMov:hover {
+    animation: girar 0.5s infinite;
+}
