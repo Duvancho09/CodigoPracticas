@@ -1,0 +1,195 @@
+.container__logo{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    max-width: 200px;
+    margin-left: 30px;
+    flex:2;
+}
+.logo__a img {
+    border-radius: 5px;
+    width: 90%;
+    transition: all 0.5s;
+}
+.logo__a img:hover{
+    transform: scale(1.2);
+}
+.header{
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 100px;
+}
+/*---------- barra de navegacion------------ */
+.navbar{
+    display: flex;
+    gap: 10%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex:6;
+    margin-top: -10px;
+}
+.navbar-btn{
+    font-size: 150%;
+    border: none;
+    color: black;
+    background: transparent;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+.navbar-btn:hover{
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgb(126, 233, 105);
+}
+.menu{
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    display: none;
+    color: white;
+    font-size: 30px;
+    flex: 6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hidden {
+    display: none;
+}
+/* ------------icono de perfil --------------- */
+.profile-icon {
+    font-size: 50px;
+    cursor: pointer;
+    max-width: 100px;
+    min-width: 50px;
+    margin-left: 2%;
+    margin-top: 1%;
+    flex:2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.profile-icon i{
+    width: 100%;
+    color: black;
+}
+.button__bg--primary {
+    background: #ffffff !important;
+}
+.navbar-2{
+    display: flex;
+    gap: 10%;
+    display: none;
+    align-items: center;
+    flex-direction: row;
+    flex-flow: column;
+    width: 100%;
+}
+
+/* tablet */
+@media only screen and (max-width: 890px) {
+    .navbar-2 {
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        display: none;
+        position: fixed;
+        background-color: hsla(0, 0%, 100%, 0.884);
+        z-index: 20;
+    }
+    .navbar-2 a{
+        text-align: center;
+        width: 100%;
+    }
+
+    .header{
+        padding: 2%;
+    }
+}
+.navbar-btn2{
+    font-size: 150%;
+    border: none;
+    color: black;
+    background: transparent;
+    cursor: pointer;
+}
+@media only screen and (max-width: 890px) {
+    .navbar-btn2 {
+      flex-direction: column;
+      margin: .5rem 0;
+    }
+    .navbar--activo{
+        display: flex;
+    }
+}
+
+/* smartphone chiquito */
+
+@media only screen and (max-height: 650px) {
+    .navbar-2 {
+        margin-top: -2%;
+    }
+}
+
+/* smartPhone acostado */
+
+@media(max-height : 500px){
+    .container__logo{
+        min-width: 50px;
+        max-width: 120px;
+    }
+    .profile-icon {
+        font-size: 30px;
+    }
+    .navbar-btn{
+        font-size:inherit;
+    }
+  }
+
+@media(max-height : 370px){
+    .navbar-2{
+        gap: 3%;
+    }
+}
+@media (max-width: 890px) {
+    .menu {
+      display: block;
+      flex-flow: row wrap;
+      justify-content: center;
+      justify-content: space-between;
+      justify-content: flex-end;
+    }
+    .profile-icon{
+        margin-top: 0px;
+        display: flex;
+        align-items: center;
+    }
+    .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 890px) {
+    .navbar {
+      flex-direction: column;
+      display: none;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .header{
+        padding: 2%;
+    }
+    
+}
+@media only screen and (max-width: 890px) {
+    .navbar-btn {
+      flex-direction: column;
+      margin: .5rem 0;
+    }
+    .navbar--activo{
+        display: flex;
+    }
+}
+

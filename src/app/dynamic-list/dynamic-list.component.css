@@ -1,0 +1,31 @@
+/* todo-list.component.css */
+.todo-list {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .todo-list h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .todo-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .todo-list li {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .todo-list li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .todo-list li.completed {
+    text-decoration: line-through;
+    color: #999;
+  }
+  

@@ -1,0 +1,212 @@
+:host{
+    display: block;
+    height: calc(100% - 115px);
+}
+.container-general{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "blanco dialogo imagen"
+    "carrusel carrusel imagen"
+    ;
+    align-items: center;
+    justify-content: center;
+}
+.carrusel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: carrusel;
+}
+.carousel-container img{
+  width: 100%;
+}
+.dialogo{
+    grid-area: dialogo;
+}
+.imagen{
+    grid-area: imagen;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.imagen img{
+    width: 80%;
+}
+
+/* Burbuja de dialogo */
+.bubble{
+    position: relative;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+.bubble::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    margin-top: -5px;
+    border-width: 10px 10px 10px 20px;
+    border-color: transparent transparent #000 ;
+    border-style: solid;
+}
+.container__texto h1{
+    position: relative;
+}
+.container__texto span{
+  display: block;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  background: #000;
+  animation: maquina 1s ease-in;
+  z-index: 10;
+}
+.bubbleOff{
+    display: none;
+}
+@keyframes maquina {
+  from{
+    width: 100%;
+  }
+  to{
+    width: 0;
+  }
+}
+
+/* Carrusel */
+.carrusel-container {
+  display: flex;
+  overflow: hidden;
+  margin: 0 5%;
+}
+.slide {
+  width: 25%;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  margin-right: 15px;
+}
+.texto {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+/* carousel-round.component.css */
+.carousel-container {
+    position: relative;
+    max-width: 100%; /* Ajusta el ancho según tus necesidades */
+    max-height: 100%; /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white; /* Fondo gris claro, puedes cambiarlo */
+  }
+  .carousel-images {
+    display: flex;
+    width: 100%; /* Doble del ancho para mostrar dos imágenes a la vez */
+    animation: moveImages 2500ms infinite linear; /* Ajusta la duración y el efecto según tus necesidades */
+  }
+  .current-image,
+  .next-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .next-image {
+    background-position: right; /* Muestra la próxima imagen desde la derecha */
+  }
+  
+  @keyframes moveImages {
+    0% {
+      transform: translateX(0);
+    }
+    100%{
+      transform: translateX(-100%);
+    }
+  }
+  
+  .control-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  /* ------------------- Responsive ------------------------- */
+  @media(max-width:800px) {
+    .container-general{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .imagen{
+      max-height: 300px;
+      width: 80%;
+      align-self: center;
+      justify-self: flex-start;
+      overflow: hidden;
+    }
+    .imagen img{
+      height: 100%;
+    }
+    .dialogo{
+      margin: 0 5%;
+    }
+    .bubble::after {
+      content: none;
+    }
+  }
+
+  /* 800x500  responsive*/ 
+  @media (max-width: 800px) and (max-height: 500px) {
+    
+    .carousel-container {
+      width: 100%;
+      height: 50%;
+
+    }
+    .container__texto h1{
+
+      margin: 0;
+    }
+    .container-general{
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: 
+      "dialogo dialogo imagen"
+      "carrusel carrusel imagen"
+      ;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  /* celular pequeño acostado */
+  @media (max-width: 480px) and (max-height: 320px) {
+    .container__texto h1{
+      font-size: 10px;
+    }
+
+  }
+
+  @media (max-width: 320px) and (max-height: 500px) {
+    .container-general{
+      display: flex;
+      flex-direction: column;
+    }
+  
+
+  }
+
+  

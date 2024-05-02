@@ -1,0 +1,133 @@
+<navbar/>
+<div class="container-general" [class.inactive]="activeIndex !== null">
+    <!-- Logos de la parte izquierda -->
+    <div class="iconos-izquierda" @translateY [class.inactive]="activeIndex === 3 || activeIndex === 4 || activeIndex === 5">
+      <div class="contenedor__icono" [class.active]="activeIndex === 0" [class.inactive]="activeIndex !== 0 && isActive"   (click)="aparecer(0)" (click)="pararAnimacion()">
+        <img src="../../assets/imgs/azul.jpg" alt="Ventaja 1">
+      </div>
+      <div class="contenedor__icono" [class.active]="activeIndex === 1" [class.inactive]="activeIndex !== 1 && isActive"   (click)="aparecer(1)" (click)="pararAnimacion()">
+        <img src="../../assets/imgs/gafas.jpg" alt="Ventaja 2">
+      </div>
+      <div class="contenedor__icono" [class.active]="activeIndex === 2" [class.inactive]="activeIndex !== 2 && isActive"  (click)="aparecer(2)" (click)="pararAnimacion()">
+        <img src="../../assets/imgs/frameworks.png" alt="Ventaja 3">
+      </div>
+    </div>
+    <!-- Imagen de emilio en la mitad -->
+    <div class="animated-box">
+      <img src="../../assets/imgs/angular.jpg" alt="Imagen de referencia">
+    </div>
+    <!-- Logos de la parte derecha -->
+    <div class="iconos-derecha" @translateY [class.inactive]="activeIndex === 0 || activeIndex === 1 || activeIndex === 2" >
+      <div class="contenedor__icono">
+        <img src="../../assets/imgs/mano.png" alt="Ventaja 4" [class.active]="activeIndex === 3" [class.inactive]="activeIndex !== 3 && isActive"  (click)="aparecer(3)" (click)="pararAnimacion()">
+      </div>
+      <div class="contenedor__icono">
+        <img src="../../assets/imgs/programas.jpg" alt="Ventaja 5" [class.active]="activeIndex === 4" [class.inactive]="activeIndex !== 4 && isActive" (click)="aparecer(4)" (click)="pararAnimacion()">
+      </div>
+      <div class="contenedor__icono">
+        <img src="../../assets/imgs/programacion1.jpg" alt="Ventaja 6" [class.active]="activeIndex === 5" [class.inactive]="activeIndex !== 5 && isActive"  (click)="aparecer(5)" (click)="pararAnimacion()">
+      </div>
+    </div>
+  </div>
+  
+  @if(activeIndex === 0){
+    <div class="container__grande" [class.active]="activeIndex === 0" [class.inactive]="activeIndex !== 0 && isActive">
+      <div class="contenedor__izquierdo">
+        <div class="icono__grande aparecer"    (click)="aparecer(0)" (click)="pararAnimacion()">
+          <h1>MEJORA DE LA EXPERIENCIA DEL USUARIO</h1>
+          <p>Las animaciones pueden hacer que la navegación por una página web sea más atractiva y agradable para los usuarios. Los efectos visuales, como transiciones suaves y elementos que responden al movimiento del cursor, pueden hacer que la experiencia de usuario sea más dinámica y atractiva.
+          </p>
+        </div>
+      </div>
+      <div class="contenerdor__derecho">
+        <div class="emilio__grande aparecer">
+          <img src="../../assets/imgs/octa.gif" alt="Emilio ITBF" (click)="aparecer(0)">
+        </div>
+      </div>
+    </div>
+  }
+  
+  @if(activeIndex === 1){
+    <div class="container__grande" [class.active]="activeIndex === 1" [class.inactive]="activeIndex !== 1 && isActive">
+      <div class="contenedor__izquierdo">
+        <div class="icono__grande aparecer"    (click)="aparecer(1)" (click)="pararAnimacion()">
+          <h1>CAPTACIÓN DE LA ATENCIÓN</h1>
+          <p>Las animaciones pueden ayudar a captar la atención del usuario y dirigirla hacia elementos importantes de la página, como llamadas a la acción o información destacada. Los movimientos sutiles o llamativos pueden destacar ciertos contenidos y guiar al usuario a través del flujo de la página.
+          </p>
+        </div>
+      </div>
+      <div class="contenerdor__derecho">
+        <div class="emilio__grande aparecer">
+          <img src="../../assets/imgs/cuadros.gif" alt="emilio itbf" (click)="aparecer(1)">
+        </div>
+      </div>
+    </div>
+  }
+  
+  @if(activeIndex === 2){
+    <div class="container__grande" [class.active]="activeIndex === 2" [class.inactive]="activeIndex !== 2 && isActive">
+      <div class="contenedor__izquierdo">
+        <div class="icono__grande aparecer"    (click)="aparecer(2)" (click)="pararAnimacion()">
+          <h1>EXPLICACIÓN DE CONCEPTOS COMPLEJOS</h1>
+          <p>Las animaciones son una herramienta efectiva para explicar conceptos complejos o procesos de una manera visual y comprensible. Por ejemplo, mediante animaciones se pueden mostrar visualmente los pasos de un proceso, el funcionamiento de un producto o la relación entre diferentes elementos.
+          </p>
+        </div>
+      </div>
+      <div class="contenerdor__derecho">
+        <div class="emilio__grande aparecer">
+          <img src="../../assets/imgs/circulo.gif" alt="EMILIO Itbf" (click)="aparecer(2)">
+        </div>
+      </div>
+    </div>
+  }
+  
+  @if(activeIndex === 3){
+    <div class="container__grande" [class.active]="activeIndex === 3" [class.inactive]="activeIndex !== 3 && isActive">
+      <div class="contenedor__izquierdo">
+        <div class="icono__grande aparecer"    (click)="aparecer(3)" (click)="pararAnimacion()">
+          <h1>INTERACTIVIDAD</h1>
+          <p>HTML, CSS y JavaScript permiten crear animaciones interactivas que responden a las acciones del usuario, como hacer clic, desplazarse o pasar el cursor sobre elementos específicos. Esta interactividad puede aumentar la participación del usuario y mejorar la experiencia general en el sitio web.
+          </p>
+        </div>
+      </div>
+      <div class="contenerdor__derecho">
+        <div class="emilio__grande aparecer">
+          <img src="../../assets/imgs/circulo1.gif" alt="ITBF Emilio" (click)="aparecer(3)">
+        </div>
+      </div>
+    </div>
+  }
+  
+  @if(activeIndex === 4){
+    <div class="container__grande" [class.active]="activeIndex === 4" [class.inactive]="activeIndex !== 4 && isActive">
+      <div class="contenedor__izquierdo">
+        <div class="icono__grande aparecer"    (click)="aparecer(4)" (click)="pararAnimacion()">
+          <h1>DIFERENCIACIÓN</h1>
+          <p>En un mundo lleno de sitios web estáticos y similares, las páginas web animadas pueden ayudar a diferenciar una marca o un producto. Las animaciones personalizadas y creativas pueden destacar y hacer que un sitio web sea memorable para los usuarios.
+        </p>
+      </div>
+    </div>
+    <div class="contenerdor__derecho">
+      <div class="emilio__grande aparecer">
+        <img src="../../assets/imgs/triangulo.gif" alt="itbf emilio" (click)="aparecer(4)">
+      </div>
+    </div>
+  </div>
+  }
+  
+  @if(activeIndex === 5){
+    <div class="container__grande" [class.active]="activeIndex === 5" [class.inactive]="activeIndex !== 5 && isActive">
+      <div class="contenedor__izquierdo">
+        <div class="icono__grande aparecer"    (click)="aparecer(5)" (click)="pararAnimacion()">
+          <h1>OPTIMIZACIÓN PARA DISPOSITIVOS MÓVILES</h1>
+          <p>Las animaciones en las páginas web pueden ser diseñadas y optimizadas para funcionar de manera efectiva en dispositivos móviles. Esto puede mejorar la experiencia del usuario en smartphones y tablets, donde el espacio es limitado y el comportamiento táctil es común.
+          </p>
+        </div>
+      </div>
+      <div class="contenerdor__derecho">
+        <div class="emilio__grande aparecer">
+          <img src="../../assets/imgs/rombo.gif" alt="ITBF emilio" (click)="aparecer(5)">
+        </div>
+      </div>
+    </div>
+  }

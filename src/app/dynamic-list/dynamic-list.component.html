@@ -1,0 +1,13 @@
+<!-- todo-list.component.html -->
+<div class="todo-list">
+  <h2>Lista de Tareas</h2>
+  <ul>
+    <li *ngFor="let item of todoList; let i = index" [class.completed]="item.completed" (click)="toggleTask(i)">
+      {{ item.task }}
+    </li>
+  </ul>
+  <form (submit)="addTask()">
+    <input type="text" [(ngModel)]="newTask" placeholder="Agregar nueva tarea">
+    <button type="submit">Agregar</button>
+  </form>
+</div>

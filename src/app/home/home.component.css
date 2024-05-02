@@ -1,7 +1,11 @@
 .container{
-    text-align: center;
     display: flex;
-    font-family: 'Exo 2', sans-serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    background-color: antiquewhite;
 }
 .container h1{
     color: black;
@@ -13,7 +17,7 @@
     transition: transform 0.3s ease-in-out;
 }
 .container h1:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     text-shadow: 0 0 10px rgb(126, 233, 105);
 }
 .imagenMov{

@@ -1,0 +1,39 @@
+.content {
+    margin-top: 15px;
+    background-size: cover;
+    padding: 40px;
+}
+h1{
+    text-align: center;
+    color: black;
+    margin-bottom: 40px;
+}
+.texto{
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+p{
+    margin-bottom: 40px;
+}
+  .fade-in-text {
+    opacity: 0;
+    font-weight: bold;
+    animation: fadeIn 6s forwards;
+    color: black;
+    text-align: center;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .img{
+    text-align: center;
+    justify-content: center;
+    height: 80%;
+  }

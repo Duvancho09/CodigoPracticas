@@ -1,0 +1,27 @@
+<navbar/>
+<div class="container-general">
+    <div class="carrusel">
+        <div class="carousel-container">
+            <div class="carrusel-container">
+                <div *ngFor="let imagen of images.slice(currentIndex1, currentIndex1 + 4); let i = index" class="slide" [class.active]="i === 0">
+                  <img [src]="imagen" alt="Imagen {{ i + 1 }}">
+                </div>
+              </div>
+          </div>
+    </div>
+    <!-- Dialogo de emilio -->
+    <div class="dialogo" [ngClass]="activarCartel ? 'bubbleOff' : ''">
+        <div class="bubble">
+            @for (item of texto; track $index) {
+                @if ($index == currentIndex) {
+                    <div class="container__texto">
+                        <h1><span>&#160;</span>{{ item }}</h1>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    <div class="imagen">
+        <img src="../../assets/imgs/bolita.gif" alt="">
+    </div>
+</div>
