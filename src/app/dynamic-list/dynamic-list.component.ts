@@ -28,5 +28,7 @@ export class DynamicListComponent {
   toggleTask(index: number) {
     this.todoList[index].completed = !this.todoList[index].completed;
   }
+  
+
 
 }

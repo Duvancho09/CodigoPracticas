@@ -40,7 +40,7 @@
 /* Burbuja de dialogo */
 .bubble{
     position: relative;
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
     background-color: black;
     color: white;
@@ -50,7 +50,7 @@
     position: absolute;
     right: -10px;
     margin-top: -5px;
-    border-width: 10px 10px 10px 20px;
+    border-width: 10px 10px 5px 20px;
     border-color: transparent transparent #000 ;
     border-style: solid;
 }
