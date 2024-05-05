@@ -5,6 +5,7 @@ import { TablaUsuarioComponent } from './tabla-usuario/tabla-usuario.component';
 import { VentajasComponent } from './ventajas/ventajas.component';
 import { ProgramacionAnimadaComponent } from './programacion-animada/programacion-animada.component';
 import { FrameworksComponent } from './frameworks/frameworks.component';
+import { FormularioComponent } from './formulario/formulario.component';
 
 export const routes: Routes = [
     { path: "", component: HomeComponent },
@@ -12,5 +13,6 @@ export const routes: Routes = [
     { path: "tablas", component: TablaUsuarioComponent},
     { path: "ventajas", component: VentajasComponent},
     { path: "programacionAnimada", component: ProgramacionAnimadaComponent},
-    { path: "frameworks", component: FrameworksComponent}
+    { path: "frameworks", component: FrameworksComponent},
+    { path: "formulario", component: FormularioComponent}
 ];

@@ -1,2 +1,19 @@
 <navbar/> 
-<dynamic-list></dynamic-list>
+<table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Edad</th>
+        <th>Ciudad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dato of datos; let i = index">
+        <td>{{ dato.nombre }}</td>
+        <td>{{ dato.apellido }}</td>
+        <td>{{ dato.edad }}</td>
+        <td><button (click)="eliminar(i)">Eliminar</button></td> <!-- Botón de eliminar -->
+      </tr>
+    </tbody>
+  </table>
