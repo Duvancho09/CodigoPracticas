@@ -2,8 +2,10 @@
     margin-top: 15px;
     background-size: cover;
     padding: 40px;
+    text-align: center;
 }
 h1{
+  font-size: 36px;
     text-align: center;
     color: black;
     margin-bottom: 40px;
@@ -32,8 +34,47 @@ p{
       opacity: 1;
     }
   }
-  .img{
-    text-align: center;
-    justify-content: center;
-    height: 80%;
+  
+  .fade-in-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
   }
+  
+  .img {
+    margin-top: 50px;
+  }
+  
+  #imagen {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  #imagen:hover {
+    transform: scale(1.1);
+  }
+
+  .arrow-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: url('https://www.w3.org/TR/SVG2/arrow.svg') no-repeat center;
+    background-size: contain;
+    animation: arrowClick 1s infinite alternate;
+  }
+  
+@keyframes arrowClick {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}

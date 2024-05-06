@@ -14,7 +14,7 @@ export class HomeComponent {
 
   ngOnInit(){
     setTimeout(() => {
-      this.router.navigate(['/programacionAnimada']);
+      this.router.navigate(['/formulario']);
     }, 5000);
   }
 

@@ -1,13 +1,10 @@
-<!-- todo-list.component.html -->
-<div class="todo-list">
-  <h2>Lista de Tareas</h2>
-  <ul>
-    <li *ngFor="let item of todoList; let i = index" [class.completed]="item.completed" (click)="toggleTask(i)">
-      {{ item.task }}
-    </li>
-  </ul>
-  <form (submit)="addTask()">
-    <input type="text" [(ngModel)]="newTask" placeholder="Agregar nueva tarea">
-    <button type="submit">Agregar</button>
-  </form>
-</div>
+<form (ngSubmit)="guardarDatos()">
+  <input type="text" name="nombre" [(ngModel)]="datos.nombre" placeholder="Nombre" autocomplete="off" required>
+  <input type="text" name="apellido" [(ngModel)]="datos.apellido" placeholder="Apellido" autocomplete="off" required>
+  <input type="number" name="edad" [(ngModel)]="datos.edad" placeholder="Edad" required>
+  <input type="text" name="ciudad" [(ngModel)]="datos.ciudad" placeholder="Ciudad" autocomplete="off" required>
+  <button type="submit">Guardar</button>
+  <div *ngIf="guardadoExitoso" class="success-message">
+    ¡Los datos se guardaron correctamente!
+  </div>
+</form>
