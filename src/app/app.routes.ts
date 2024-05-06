@@ -6,6 +6,8 @@ import { VentajasComponent } from './ventajas/ventajas.component';
 import { ProgramacionAnimadaComponent } from './programacion-animada/programacion-animada.component';
 import { FrameworksComponent } from './frameworks/frameworks.component';
 import { FormularioComponent } from './formulario/formulario.component';
+import { VentajasUsuarioComponent } from './ventajas-usuario/ventajas-usuario.component';
+import { RespuestasComponent } from './respuestas/respuestas.component';
 
 export const routes: Routes = [
     { path: "", component: HomeComponent },
@@ -14,5 +16,7 @@ export const routes: Routes = [
     { path: "ventajas", component: VentajasComponent},
     { path: "programacionAnimada", component: ProgramacionAnimadaComponent},
     { path: "frameworks", component: FrameworksComponent},
-    { path: "formulario", component: FormularioComponent}
+    { path: "formulario", component: FormularioComponent},
+    { path: "ventajasUsuario", component: VentajasUsuarioComponent},
+    { path: "respuestas", component: RespuestasComponent}
 ];

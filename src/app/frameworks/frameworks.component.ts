@@ -56,7 +56,7 @@ export class FrameworksComponent {
   ngOnInit(){
     this.startCarousel();
     setTimeout(() => {
-      this.router.navigate(['/formulario']);
+      this.router.navigate(['/respuestas']);
     }, 9000);
   }
   ngOnDestroy() {

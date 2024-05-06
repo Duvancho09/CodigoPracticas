@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DatosService } from '../services/datos.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2'
 
 interface TodoItem {
   task: string;
@@ -28,7 +29,18 @@ export class DynamicListComponent {
 
   guardarDatos() {
     this.datosService.guardarDatos(this.datos);
-    this.router.navigate(['tablas']);
+    Swal.fire({
+      title: '¡Gracias por llenar tus datos!',
+      text: '¡Sigue disfrutando de la experiencia en la página!',
+      icon: 'success',
+      confirmButtonText: 'OK'
+    })
+    setTimeout(() => {
+      if(document.querySelector('.swal2-container')){
+        Swal.close();
+      }
+    }, 5000);
+    this.router.navigate(['/tablas']);
   }
 
   addTask() {

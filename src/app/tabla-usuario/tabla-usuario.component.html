@@ -1,5 +1,5 @@
 <navbar/> 
-<table>
+<table [class.tabla-visible]="mostrarTabla">
     <thead>
       <tr>
         <th>Nombre</th>
@@ -13,7 +13,7 @@
         <td>{{ dato.nombre }}</td>
         <td>{{ dato.apellido }}</td>
         <td>{{ dato.edad }}</td>
-        <td><button (click)="eliminar(i)">Eliminar</button></td> <!-- Botón de eliminar -->
+        <td><button class="delete-button" (click)="eliminar(i)">Eliminar</button></td> <!-- Botón de eliminar -->
       </tr>
     </tbody>
   </table>
