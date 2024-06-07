@@ -1,5 +1,6 @@
-<navbar/> 
-<table [class.tabla-visible]="mostrarTabla">
+<navbar/>
+<div class="tabla">
+  <table [class.tabla-visible]="mostrarTabla">
     <thead>
       <tr>
         <th>Nombre</th>
@@ -9,11 +10,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let dato of datos; let i = index">
-        <td>{{ dato.nombre }}</td>
-        <td>{{ dato.apellido }}</td>
-        <td>{{ dato.edad }}</td>
-        <td><button class="delete-button" (click)="eliminar(i)">Eliminar</button></td> <!-- Botón de eliminar -->
+      <tr *ngFor="let item of data; let i = index" [style.animationDelay]="i * 0.1 + 's'">
+        <td>{{item.nombre}}</td>
+        <td>{{item.apellido}}</td>
+        <td>{{item.edad}}</td>
+        <td>{{item.ciudad}}</td>
       </tr>
     </tbody>
   </table>
+</div>

@@ -10,6 +10,12 @@
     align-items: center;
     justify-content: center;
   }
+  .contenedor__icono img {
+    transition: transform 0.3s ease;
+  }
+  .contenedor__icono img:hover {
+    transform: scale(1.1);
+  }
   .iconos-izquierda{
     flex: 1;
     display: flex;
@@ -130,12 +136,13 @@
     font-weight: 500;
     font-size: 1.5rem;
   }
-  .emilio__grande{
+  .Icono__grande{
     max-width: 400px;
     width: 80%;
   }
-  .emilio__grande img{
+  .Icono__grande img{
     width: 100%;
+    border-radius: 10px;
   }
   
   /* ------------------------------------ Responsive ------------------------------ */

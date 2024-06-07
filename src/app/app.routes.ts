@@ -8,6 +8,8 @@ import { FrameworksComponent } from './frameworks/frameworks.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { VentajasUsuarioComponent } from './ventajas-usuario/ventajas-usuario.component';
 import { RespuestasComponent } from './respuestas/respuestas.component';
+import { RespuestaUsuarioComponent } from './respuesta-usuario/respuesta-usuario.component';
+import { RespuestasVistaComponent } from './respuestas-vista/respuestas-vista.component';
 
 export const routes: Routes = [
     { path: "", component: HomeComponent },
@@ -18,5 +20,7 @@ export const routes: Routes = [
     { path: "frameworks", component: FrameworksComponent},
     { path: "formulario", component: FormularioComponent},
     { path: "ventajasUsuario", component: VentajasUsuarioComponent},
-    { path: "respuestas", component: RespuestasComponent}
+    { path: "respuestas/:id", component: RespuestasComponent},
+    { path: "respuestaUsuario", component: RespuestaUsuarioComponent},
+    { path: "respuestasVista/:id", component: RespuestasVistaComponent}
 ];

@@ -1,19 +1,16 @@
 <navbar/>
-<form class="formulario" [formGroup]="formularioVentajas" (ngSubmit)="formulario()">
+<form class="formulario" [formGroup]="respuestaVentajas">
   <h2>Encuesta sobre Experiencia de Usuario en Páginas Web</h2>
   <div class="columnas">
     <div class="columna">
       
         <div class="pregunta">
           <label for="paginas_web">¿Cree que las páginas web mejoran la experiencia con el usuario?</label>
-          <select id="paginas_web" formControlName="experiencia">
-            <option value="si">Sí</option>
-            <option value="no">No</option>
-          </select>
+          <p>{{dataRespuesta.experiencia}}</p>
         </div>
         <div class="respuesta">
           <label for="razon_paginas_web">¿Por qué?</label>
-          <textarea id="razon_paginas_web" formControlName="experienciaRespuesta" rows="4" autocomplete="off"></textarea>
+          <p>{{dataRespuesta.experienciaRespuesta}}</p>
         </div>
       
     </div>
@@ -21,14 +18,11 @@
       
         <div class="pregunta">
           <label for="paginas_animadas">¿Cree que las páginas web animadas captan más la atención del usuario o los distraería más?</label>
-          <select id="paginas_animadas" formControlName="atencion">
-            <option value="si">Sí</option>
-            <option value="no">No</option>
-          </select>
+          <p>{{dataRespuesta.atencion}}</p>
         </div>
         <div class="respuesta">
           <label for="razon_paginas_animadas">¿Por qué?</label>
-          <textarea id="razon_paginas_animadas" formControlName="atencionRespuesta" rows="4" autocomplete="off"></textarea>
+          <p>{{dataRespuesta.atencionRespuesta}}</p>
         </div>
       
     </div>
@@ -38,14 +32,11 @@
       
         <div class="pregunta">
           <label for="paginas_explicativas">¿Cree que las páginas web explican mejor las cosas complejas que solo una página de información sin ejemplos ni nada?</label>
-          <select id="paginas_explicativas" formControlName="complejas">
-            <option value="si">Sí</option>
-            <option value="no">No</option>
-          </select>
+          <p>{{dataRespuesta.complejas}}</p>
         </div>
         <div class="respuesta">
           <label for="razon_paginas_explicativas">¿Por qué?</label>
-          <textarea id="razon_paginas_explicativas" formControlName="complejasRespuesta" rows="4" autocomplete="off"></textarea>
+          <p>{{dataRespuesta.complejasRespuesta}}</p>
         </div>
       
     </div>
@@ -53,14 +44,11 @@
       
         <div class="pregunta">
           <label for="paginas_explicativas">¿Cree que las páginas web animadas tienen mas interactividad con los usuarios?</label>
-          <select id="paginas_explicativas" formControlName="interactividad">
-            <option value="si">Sí</option>
-            <option value="no">No</option>
-          </select>
+          <p>{{dataRespuesta.interactividad}}</p>
         </div>
         <div class="respuesta">
           <label for="razon_paginas_explicativas">¿Por qué?</label>
-          <textarea id="razon_paginas_explicativas" formControlName="interactividadRespuesta" rows="4" autocomplete="off"></textarea>
+          <p>{{dataRespuesta.interactividadRespuesta}}</p>
         </div>
       
     </div>
@@ -70,14 +58,11 @@
       
         <div class="pregunta">
           <label for="paginas_explicativas">¿Cree que las páginas web se diferencian de las páginas web clasicas y contemporaneas?</label>
-          <select id="paginas_explicativas" formControlName="clasicas">
-            <option value="si">Sí</option>
-            <option value="no">No</option>
-          </select>
+          <p>{{dataRespuesta.clasicas}}</p>
         </div>
         <div class="respuesta">
           <label for="razon_paginas_explicativas">¿Por qué?</label>
-          <textarea id="razon_paginas_explicativas" formControlName="clasicasRespuesta" rows="4" autocomplete="off"></textarea>
+          <p>{{dataRespuesta.clasicasRespuesta}}</p>
         </div>
       
     </div>
@@ -85,18 +70,17 @@
       
         <div class="pregunta">
           <label for="paginas_explicativas">¿Crees que las páginas web animadas seran optimas para celulares y navegadores?</label>
-          <select id="paginas_explicativas" formControlName="optimas">
-            <option value="si">Sí</option>
-            <option value="no">No</option>
-          </select>
+          <p>{{dataRespuesta.optimas}}</p>
         </div>
         <div class="respuesta">
           <label for="razon_paginas_explicativas">¿Por qué?</label>
-          <textarea id="razon_paginas_explicativas" formControlName="optimasRespuesta" rows="4" autocomplete="off"></textarea>
+          <p>{{dataRespuesta.optimasRespuesta}}</p>
         </div>
         
       
     </div>
   </div>
-  <button type="submit">Enviar</button>
+  <a (click)="goBack()" class="buttons__a">
+    <button>Regresar</button>
+</a>
 </form>

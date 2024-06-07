@@ -1,10 +1,10 @@
-<form (ngSubmit)="guardarDatos()">
-  <input type="text" name="nombre" [(ngModel)]="datos.nombre" placeholder="Nombre" autocomplete="off" required>
-  <input type="text" name="apellido" [(ngModel)]="datos.apellido" placeholder="Apellido" autocomplete="off" required>
-  <input type="number" name="edad" [(ngModel)]="datos.edad" placeholder="Edad" required>
-  <input type="text" name="ciudad" [(ngModel)]="datos.ciudad" placeholder="Ciudad" autocomplete="off" required>
+<form [formGroup]="datosPersonaForm" (ngSubmit)="guardarDatos()">
+  <input type="text" formControlName="nombre" placeholder="Nombre" autocomplete="off" required>
+  <input type="text" formControlName="apellido" placeholder="Apellido" autocomplete="off" required>
+  <input type="number" formControlName="edad" placeholder="Edad" required>
+  <input type="text" formControlName="ciudad" placeholder="Ciudad" autocomplete="off" required>
   <button type="submit">Guardar</button>
-  <div *ngIf="guardadoExitoso" class="success-message">
+  <!-- <div *ngIf="guardadoExitoso" class="success-message">
     ¡Los datos se guardaron correctamente!
-  </div>
+  </div> -->
 </form>

@@ -1,1 +1,168 @@
 <navbar/>
+<form class="formulario" [formGroup]="respuestaVentajas" (ngSubmit)="onSubmit()">
+  <section>
+  <h2>Encuesta sobre Experiencia de Usuario en Páginas Web</h2>
+  <div class="columnas">
+    <div class="columna">
+      
+        <div class="pregunta">
+          <label for="paginas_web">¿Cree que las páginas web mejoran la experiencia con el usuario?</label>
+          <select id="paginas_web" formControlName="experiencia" [(ngModel)]="dataRespuesta.experiencia">
+            <option disabled selected> Opciones</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+          </select>
+          <!-- validacion -->
+          <div *ngIf="respuestaVentajas.get('experiencia')?.touched && respuestaVentajas.get('experiencia')?.invalid || formSubmitted && respuestaVentajas.get('experiencia')?.invalid" class="form-err">
+            <div *ngIf="respuestaVentajas.get('experiencia')?.hasError('maxlength')">Este campo solo acepta un maximo de 600 caracteres</div>
+          </div>
+        </div>
+        <div class="respuesta">
+          <label for="razon_paginas_web">¿Por qué?</label>
+          <textarea type="text" formControlName="experienciaRespuesta" [(ngModel)]="dataRespuesta.experienciaRespuesta">
+          <!-- validacion -->
+          <div *ngIf="respuestaVentajas.get('experienciaRespuesta')?.touched && respuestaVentajas.get('experienciaRespuesta')?.invalid || formSubmitted && respuestaVentajas.get('experienciaRespuesta')?.invalid" class="form-err">
+            <div *ngIf="respuestaVentajas.get('experienciaRespuesta')?.hasError('maxlength')">Este campo solo acepta un maximo de 600 caracteres</div>
+          </div>
+          </textarea>
+        </div>
+      
+    </div>
+    <div class="columna">
+      
+        <div class="pregunta">
+          <label for="paginas_animadas">¿Cree que las páginas web animadas captan más la atención del usuario o los distraería más?</label>
+          <select id="paginas_web" formControlName="atencion" [(ngModel)]="dataRespuesta.atencion">
+            <option disabled selected> Opciones</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+          </select>
+          <!-- validacion -->
+          <div *ngIf="respuestaVentajas.get('atencion')?.touched && respuestaVentajas.get('atencion')?.invalid || formSubmitted && respuestaVentajas.get('atencion')?.invalid" class="form-err">
+            <div *ngIf="respuestaVentajas.get('atencion')?.hasError('maxlength')">Este campo solo acepta un maximo de 600 caracteres</div>
+          </div>
+          <!-- <select id="paginas_animadas" formControlName="atencion" [(ngModel)]="dataRespuesta.atencion">
+            <option disabled selected> Opciones</option>
+          </select> -->
+        </div>
+        <div class="respuesta">
+          <label for="razon_paginas_animadas">¿Por qué?</label>
+          <textarea type="text" formControlName="atencionRespuesta" [(ngModel)]="dataRespuesta.atencionRespuesta">
+          <!-- validacion -->
+          <div *ngIf="respuestaVentajas.get('atencionRespuesta')?.touched && respuestaVentajas.get('atencionRespuesta')?.invalid || formSubmitted && respuestaVentajas.get('atencionRespuesta')?.invalid" class="form-err">
+            <div *ngIf="respuestaVentajas.get('atencionRespuesta')?.hasError('maxlength')">Este campo solo acepta un maximo de 600 caracteres</div>
+          </div>
+          </textarea>
+        </div>
+      
+    </div>
+  </div>
+  <div class="columnas">
+    <div class="columna">
+      
+        <div class="pregunta">
+          <label for="paginas_explicativas">¿Cree que las páginas web explican mejor las cosas complejas que solo una página de información sin ejemplos ni nada?</label>
+          <select id="paginas_web" formControlName="complejas" [(ngModel)]="dataRespuesta.complejas">
+            <option disabled selected> Opciones</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+          </select>
+          <!-- validacion -->
+          <div *ngIf="respuestaVentajas.get('complejas')?.touched && respuestaVentajas.get('complejas')?.invalid || formSubmitted && respuestaVentajas.get('complejas')?.invalid" class="form-err">
+            <div *ngIf="respuestaVentajas.get('complejas')?.hasError('maxlength')">Este campo solo acepta un maximo de 600 caracteres</div>
+          </div>
+        </div>
+        <div class="respuesta">
+          <label for="razon_paginas_explicativas">¿Por qué?</label>
+          <textarea type="text" formControlName="complejasRespuesta" [(ngModel)]="dataRespuesta.complejasRespuesta">
+          <!-- validacion -->
+          <div *ngIf="respuestaVentajas.get('complejasRespuesta')?.touched && respuestaVentajas.get('complejasRespuesta')?.invalid || formSubmitted && respuestaVentajas.get('complejasRespuesta')?.invalid" class="form-err">
+            <div *ngIf="respuestaVentajas.get('complejasRespuesta')?.hasError('maxlength')">Este campo solo acepta un maximo de 600 caracteres</div>
+          </div>
+          </textarea>
+        </div>
+      
+    </div>
+    <div class="columna">
+      
+        <div class="pregunta">
+          <label for="paginas_explicativas">¿Cree que las páginas web animadas tienen mas interactividad con los usuarios?</label>
+          <select id="paginas_web" formControlName="interactividad" [(ngModel)]="dataRespuesta.interactividad">
+            <option disabled selected> Opciones</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+          </select>
+          <!-- validacion -->
+          <div *ngIf="respuestaVentajas.get('interactividad')?.touched && respuestaVentajas.get('interactividad')?.invalid || formSubmitted && respuestaVentajas.get('interactividad')?.invalid" class="form-err">
+            <div *ngIf="respuestaVentajas.get('interactividad')?.hasError('maxlength')">Este campo solo acepta un maximo de 600 caracteres</div>
+          </div>
+        </div>
+        <div class="respuesta">
+          <label for="razon_paginas_explicativas">¿Por qué?</label>
+          <textarea type="text" formControlName="interactividadRespuesta" [(ngModel)]="dataRespuesta.interactividadRespuesta">
+          <!-- validacion -->
+          <div *ngIf="respuestaVentajas.get('interactividadRespuesta')?.touched && respuestaVentajas.get('interactividadRespuesta')?.invalid || formSubmitted && respuestaVentajas.get('interactividadRespuesta')?.invalid" class="form-err">
+            <div *ngIf="respuestaVentajas.get('interactividadRespuesta')?.hasError('maxlength')">Este campo solo acepta un maximo de 600 caracteres</div>
+          </div>
+          </textarea>
+        </div>
+      
+    </div>
+  </div>
+  <div class="columnas">
+    <div class="columna">
+      
+        <div class="pregunta">
+          <label for="paginas_explicativas">¿Cree que las páginas web se diferencian de las páginas web clasicas y contemporaneas?</label>
+          <select id="paginas_web" formControlName="clasicas" [(ngModel)]="dataRespuesta.clasicas">
+            <option disabled selected> Opciones</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+          </select>
+          <!-- validacion -->
+          <div *ngIf="respuestaVentajas.get('clasicas')?.touched && respuestaVentajas.get('clasicas')?.invalid || formSubmitted && respuestaVentajas.get('clasicas')?.invalid" class="form-err">
+            <div *ngIf="respuestaVentajas.get('clasicas')?.hasError('maxlength')">Este campo solo acepta un maximo de 600 caracteres</div>
+          </div>
+        </div>
+        <div class="respuesta">
+          <label for="razon_paginas_explicativas">¿Por qué?</label>
+          <textarea type="text" formControlName="clasicasRespuesta" [(ngModel)]="dataRespuesta.clasicasRespuesta">
+          <!-- validacion -->
+          <div *ngIf="respuestaVentajas.get('clasicasRespuesta')?.touched && respuestaVentajas.get('clasicasRespuesta')?.invalid || formSubmitted && respuestaVentajas.get('clasicasRespuesta')?.invalid" class="form-err">
+            <div *ngIf="respuestaVentajas.get('clasicasRespuesta')?.hasError('maxlength')">Este campo solo acepta un maximo de 600 caracteres</div>
+          </div>
+          </textarea>
+        </div>
+      
+    </div>
+    <div class="columna">
+      
+        <div class="pregunta">
+          <label for="paginas_explicativas">¿Crees que las páginas web animadas seran optimas para celulares y navegadores?</label>
+          <select id="paginas_web" formControlName="optimas" [(ngModel)]="dataRespuesta.optimas">
+            <option disabled selected> Opciones</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+          </select>
+          <!-- validacion -->
+          <div *ngIf="respuestaVentajas.get('optimas')?.touched && respuestaVentajas.get('optimas')?.invalid || formSubmitted && respuestaVentajas.get('optimas')?.invalid" class="form-err">
+            <div *ngIf="respuestaVentajas.get('optimas')?.hasError('maxlength')">Este campo solo acepta un maximo de 600 caracteres</div>
+          </div>
+        </div>
+        <div class="respuesta">
+          <label for="razon_paginas_explicativas">¿Por qué?</label>
+          <textarea type="text" formControlName="optimasRespuesta" [(ngModel)]="dataRespuesta.optimasRespuesta">
+          <!-- validacion -->
+          <div *ngIf="respuestaVentajas.get('optimasRespuesta')?.touched && respuestaVentajas.get('optimasRespuesta')?.invalid || formSubmitted && respuestaVentajas.get('optimasRespuesta')?.invalid" class="form-err">
+            <div *ngIf="respuestaVentajas.get('optimasRespuesta')?.hasError('maxlength')">Este campo solo acepta un maximo de 600 caracteres</div>
+          </div>
+          </textarea>
+        </div>
+        
+      
+    </div>
+  </div>
+  <button type="submit" class="btn actualizar">Actualizar</button>
+  <button class="btn regresar" (click)="goBack()">Regresar</button>
+</section>
+</form>

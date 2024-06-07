@@ -1,0 +1,170 @@
+/* ---------------------------------contenedor general---------------------------- */
+.main{
+    /* height: calc(100vh - 85px); */
+    width: 100%;
+    display: flex;
+}
+.main__sidebar{
+    background-color: var(--azul-fondo);
+    flex: 2;
+}
+.main__content{
+    /* padding-left: 3%;. */
+    width: 100%;
+    flex: 7;
+    background-color: var(--azul-fondo);
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.table-enter {
+    opacity: 0;
+    animation: fadeInTable 1s forwards;
+  }
+  
+  @keyframes fadeInTable {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Estilos para la cabecera */
+  th, td {
+    padding: 12px 15px;
+  }
+  
+  /* Colores alternados para las filas */
+  tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #e9e9e9;
+  }
+  
+  /* Estilos para el hover */
+  tbody tr:hover {
+    background-color: #d1e0e0;
+    cursor: pointer;
+  }
+  
+  /* Estilos para la cabecera */
+  thead th {
+    background-color: #333;
+    color: #ffffff;
+  }
+  
+  /* Bordes para las celdas */
+  th, td {
+    border: 1px solid #dddddd;
+  }
+  
+  /* Animación para las filas */
+  tbody tr {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+/* -------------------------------------------- sidebar ---------------------------------------------------- */
+/* se oculta la sidebar de responsive */
+.content__sidebar{
+    display: none;
+}
+/* ----------------------------------------------button----------------------------------------------------- */
+.button{
+    width: 100%;
+    background-color: var(--azul-sidebar);
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+/* buttoms create */
+.container__buttons{
+    margin-top: 2%;
+    display: flex;
+    gap: 5px;
+}
+.buttons__a button{
+    border-radius: 10px;
+    border: none;
+    color: var(--blanco);
+    background-color: var(--azul-oscuro);
+    padding: 0 10px;
+    cursor: pointer;
+}
+/* ----------------------------------------------- Contenido ------------------------------------------------ */
+.container__component{
+    width: 100%;
+    padding: 2% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* ------------- table------------ */
+table{
+    /* border: solid 1px black; */
+    width: 100%;
+    border-radius: 5px;
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: max-content;
+    
+}
+th{
+    position: sticky;
+    background-color: var(--azul-principal);
+    color: var(--blanco);
+    top:0;
+}
+.table-wrapper{
+    /* max-height: 300px; */
+    overflow-x: scroll;
+    margin: 20px;
+}
+th, td{
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+td{
+    background-color: var(--gris);
+}
+.titulo__grande{
+    text-align: center;
+    margin-top: 3%;
+}
+
+.outer-wrapper{
+    border: 1px solid var(--azul-fondo);
+    box-shadow: 0px 0px 1px black;
+    border-radius: 5px;
+    max-width: fit-content;
+    width: 100%;
+    min-width: 90%;
+    margin-top: 5%;
+    background-color: var(--gris);
+}
+
+
+/* ----------------------------------------------Responsitve----------------------------------------- */
+@media(max-width:800px) {
+    /* contenedor general */
+    .main{
+        flex-direction: column;
+    }
+    .table-wrapper{
+        overflow-x: scroll;
+
+    }
+    
+    /* ------------------- contenedor del contenido responsive ------------------------ */
+
+
+
+}
